@@ -1,4 +1,4 @@
-import { getProductoService } from "./services/getProductoService";
+import { getProductoService } from "./services/getProductoService.js";
 
 const btn = document.getElementById("userNumber") as HTMLButtonElement;
 const salida = document.getElementById("usuarios") as HTMLDivElement;
