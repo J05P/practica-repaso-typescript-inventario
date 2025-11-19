@@ -1,4 +1,4 @@
-import { productos } from "../data/info";
+import { productos } from "../data/info.js";
 
 export async function getProductoService(id: number): Promise<string>{
 
