@@ -1,0 +1,46 @@
+estructura:
+public---index.html	
+src-----|
+	|
+	data---info.ts//el array
+	doamin\entities---producto// las variables que tienen id:number etc
+	services---get//los get 
+	main.ts
+
+
+getProductosService busca por el id:
+import { productos } from "../data/info.ts";
+
+export async function getProductoService(id: number): Promise<string>{
+
+    const promesa: Promise<string> = new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            const Productos = productos.find( e => e.id === id)?.nombre
+
+            if(Productos) {
+                resolve(Productos);
+            } else {
+                reject(`productos con id ${id} no existe`)
+            }
+        }, 800);
+    });
+    return promesa;
+}
+
+Crear la compilacion de JS:
+npm init -y
+npx tsc --init
+{
+  "compilerOptions": {
+    "target": "ES2020",    
+    "module": "ES2020",   
+    "outDir": "public/dist",  
+    "rootDir": "src",      
+    "strict": true,         
+   
+  },
+  
+}
+
+//compila cada vez que hagas un cambio si no no va 
+npx tsc 
