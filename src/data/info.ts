@@ -1,5 +1,5 @@
 
-import { Producto } from "../domain/entites/producto.ts"
+import { Producto } from "../domain/entities/producto.ts";
 
 export const productos: Producto[] = [
     { id: 1, nombre: "Teclado", categoria: "Periféricos", stock: 10 },
